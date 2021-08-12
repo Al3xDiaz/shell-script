@@ -7,5 +7,5 @@ Commands shell script
 ## Create git ignore for node.js
 #git init && npm init -y
 ## Create git repo and package.json default 
-npx license mit > LICENSE && npx gitignore node && git init && npm init -y
+npx license MIT && npx gitignore node && git init && npm init -y
 ``
