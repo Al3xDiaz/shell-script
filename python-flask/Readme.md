@@ -1,9 +1,9 @@
 ### Commands
-```
+```python
 #create virtual env
 $ virtualenv vend --python=python3.9.2
 # activate virtaul env
-$ source /vend/bin/activate
+$ source vend/Scripts/activate
 # deactivate virtal env
 $ deactivate
 # install Flask
