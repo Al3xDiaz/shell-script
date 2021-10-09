@@ -3,6 +3,8 @@ Commands shell script
 ```sh
 service $SERVICE restart
 
+#format json
+curl -s $URI | jq ""
 groups $USER
 ifconfig
 ip <-4|-6> a
