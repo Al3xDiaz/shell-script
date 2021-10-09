@@ -1,4 +1,4 @@
-# shortcut-shell
+# Shell Script
 Commands shell script
 ```sh
 service $SERVICE restart
