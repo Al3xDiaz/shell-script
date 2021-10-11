@@ -10,5 +10,5 @@ kubectl create deployment $NAME --image $IMAGE
 kubectl set image deploy $DEPLOYMENT $POD=$IMAGE
 
 #rollback rolling
-#kubectl rollout undo deploy $DEPLOYMENT
+kubectl rollout undo deploy $DEPLOYMENT
 ```
