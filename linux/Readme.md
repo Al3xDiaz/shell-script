@@ -15,16 +15,17 @@ gcommit() {
     git branch
     git add .
     git status
-    git commit -m "$1"
+    sh ./test.sh && git commit -m "$1"
 }
 gpush(){
-    gcommit "$1"
-    git push
+    gcommit "$1" && git push
 }
-alias tree="cmd //c tree"
 gstash(){
     git add .
     git stash $@
+}
+ipv4(){
+hostname -I | awk '{print $1}'
 }
 
 ```
