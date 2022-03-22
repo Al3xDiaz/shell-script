@@ -29,3 +29,17 @@ hostname -I | awk '{print $1}'
 }
 
 ```
+# Add Wifi to Debian
+## 1.Add “non-free” component to /etc/apt/sources.list, for example:
+```
+# Debian 9 "Stretch"
+deb http://httpredir.debian.org/debian/ stretch main contrib non-free
+```
+## 2.Update the list of available packages and install the firmware-iwlwifi package:
+```sh
+apt-get update; apt-get install firmware-iwlwifi
+```
+## 3.As the iwlwifi module is automatically loaded for supported devices, reinsert this module to access installed firmware:
+```sh
+modprobe -r iwlwifi; modprobe iwlwifi
+```
