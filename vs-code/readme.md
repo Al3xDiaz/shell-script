@@ -1,11 +1,62 @@
 # VS code snipeds
 ```javascript
 {
-	// class
-
-{
-	// class
-
+	// models
+	"model":{
+		"prefix": "model",
+		"body": [
+			"from django.db import models",
+			"class ${1:Model}:",
+			"\t${2:attribute}"
+		]
+	},
+	"model char Field":{
+		"prefix": "mcharfield",
+		"body": [
+			"${1} = models.CharField(",    
+			"\t\thelp_text=\"${2:this is property}\",",
+			"\t\tmax_length=${3:20},$4",
+			")"
+		]
+	},
+	"model int Field":{
+		"prefix": "mintfield",
+		"body": [
+			"${1} = models.IntegerField(",
+			"\t\thelp_text=\"${2:this is property}\",",
+			"\t\t${3},$4",
+			")"
+		]
+	},
+	"model positive int Field":{
+		"prefix": "mpintfield",
+		"body": [
+			"${1} = models.IntegerField(",
+			"\t\thelp_text=\"${2:this is property}\",",
+			"\t\t${3},$4",
+			")"
+		]
+	},
+	"model ForeignKey Field":{
+		"prefix": "mforeignkeyfield",
+		"body": [
+			"${1} = models.ForeignKey(",
+			"\t\thelp_text=\"${2:this is property}\",",
+			"\t\tto=\"${3}\",$4",
+			")"
+		]
+	},
+	"model file Field":{
+		"prefix": "mfilefield",
+		"body": [
+			"${1} = models.FileField(",
+			"\t\thelp_text=\"${2:this is property}\",",
+			"\t\tnull=${3:True},",
+			"\t\tblank=${4:True},$5",
+			")"
+		]
+	},
+	//serializers
 	"serializer":{
 		"prefix": "serializer",
 		"body": [
@@ -37,6 +88,7 @@
 			"\t\t#read_only_fields= ['']",
 		]
 	},
+	//viewset
 	"model viewset":{
 		"prefix": "modelviewset",
 		"body": [
@@ -65,6 +117,7 @@
 			"\t#permission_classes =[IsAuthenticated, AllowAny,$3]"
 		]
 	},
+	//urlpatterns
 	"urlpatterns":{
 		"prefix": "url_patterns",
 		"body": [
@@ -80,6 +133,7 @@
 			"]",
 		]
 	},
+	//clasic
 	"class":{
 		"prefix": "class",
 		"body": [
@@ -107,5 +161,4 @@
 		]
 	},
 }
-
 ```
