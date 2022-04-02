@@ -10,6 +10,7 @@
 #.bash_login  
 #.bash_profile  
 #.bashrc
+alias open=xdg-open
 gcommit() {
     #do things with parameters like $1 such as
     git branch
