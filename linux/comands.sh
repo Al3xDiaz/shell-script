@@ -14,5 +14,6 @@ gstash(){
     git stash $@
 }
 ipv4(){
-hostname -I | awk '{print $1}'
+    hostname -I | awk '{print $1}'
 }
+alias grep=grep --color
