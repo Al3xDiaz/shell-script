@@ -16,4 +16,4 @@ gstash(){
 ipv4(){
     hostname -I | awk '{print $1}'
 }
-alias grep=grep --color
+alias grep="grep --color"
